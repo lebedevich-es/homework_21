@@ -3,7 +3,7 @@ package guru.qa.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${env}.properties"
+        "classpath:${deviceHost}.properties"
 })
 public interface MobileConfig extends Config {
 
@@ -18,5 +18,11 @@ public interface MobileConfig extends Config {
     @Key("appUrl")
     @DefaultValue("bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c")
     String getAppUrl();
+
+    @Key("appPackage")
+    String getAppPackage();
+
+    @Key("appActivity")
+    String getAppActivity();
 
 }
